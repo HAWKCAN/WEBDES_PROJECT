@@ -1,0 +1,536 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Biar padding ga nambah ukuran elemen */
+    font-size: 16px;
+    
+} 
+ body {
+      margin: 0;
+      font-family: 'Poppins', Arial, sans-serif;
+      background: #fff;
+      min-height: 100vh;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+    a{
+      text-decoration: none;
+    }
+
+    #section1 {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 100dvw;
+        width: auto;
+
+        height: 70px;
+        flex-direction: column;
+    }
+    .header-top {
+      background: #4D4F16;
+      height: 70px;
+      width: auto;
+      min-width: 100dvw;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 10;
+      padding: 0 40px;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      height: 70px;
+      margin-left: 200px;
+    }
+    .header-logo-area {
+      display: flex;
+      align-items: center;
+    }
+    .header-logo-area img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #fff;
+      margin-right: 14px;
+      margin-top: -10px;
+      object-fit: cover;
+      border: 3px solid #fff;
+      box-sizing: border-box;
+    }
+    .site-title {
+      letter-spacing: 1px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      font-family: 'Poppins', Arial, sans-serif;
+    }
+    .site-title .taniblack {
+      color: #fff;
+      font-size: 1.5rem;
+
+    }
+    .site-title .kitagreen {
+      color: #9DD89F;
+      font-size: 1.5rem;
+      margin-left:2px;
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      height: 70px;
+      margin-right: 200px;
+    }
+    .header-action-btn {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.04rem;
+      font-weight: 600;
+      font-family: 'Poppins', Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      gap: 7px;
+      padding: 0;
+      transition: color 0.2s;
+      position: relative;
+      top: 1px;
+      height: 70px;
+      
+    }
+    .header-actions i{
+      font-size: 1.23rem;
+      margin-right: 2px;
+      color: #9DD89F;
+      position: relative;
+      top: 2px;
+
+    }
+    .contact-a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .about-a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .header-action-btn .contact-a:hover {
+      color: #9DD89F;
+    }
+     .header-action-btn .about-a:hover {
+      color: #9DD89F;
+    }
+    .navbar {
+      background: #000;
+      width: auto;
+      min-width: 70dvw;
+      max-width: 90dvw;
+      border-radius: 0 0 80px 80px / 0 0 80px 80px;
+      height: 50px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 58px;
+      z-index: 20;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 3px 18px rgba(0,0,0,0.07);
+       transition: transform 0.3s ease-in-out;
+       will-change: transform;
+    }
+
+.navbar--hidden {
+  transform: translate(-50%, -150%);
+}
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 120px;
+      height: 62px;
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0 36px;
+    }
+    .nav-btn {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.15rem;
+      font-weight: 600;
+      font-family: 'Poppins', Arial, sans-serif;
+      padding: 0 8px;
+      cursor: pointer;
+      letter-spacing: .5px;
+      height: 62px;
+      display: flex;
+      align-items: center;
+      transition: color 0.17s;
+    }
+    .nav-btn:hover {
+      color: #9DD89F;
+    }
+    .nav-search-area {
+      margin-left: 100px;
+      display: flex;
+      align-items: center;
+      height: 38px;
+    }
+    .nav-searchbar {
+      width: 150px;
+      height: 25px;
+      border-radius: 16px;
+      border: none;
+      outline: none;
+      padding: 0 18px;
+      font-size: 1rem;
+      background: #fff;
+      color: #333;
+      box-sizing: border-box;
+      box-shadow: 0 2px 7px 0 rgba(0,0,0,0.07);
+      margin-top: 0;
+    }
+   
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .nav .logo {
+        font-weight: bold;
+        font-size: 20px;
+        color: #2D6830;
+        display: flex;
+        object-fit: cover;
+        align-items: center;
+    }
+    .nav-links {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        font-size: 0.95rem;
+        padding: 0;
+        margin: 0;
+    }
+    .nav-links li a {
+        text-decoration: none;
+        color: #333;
+    }
+    .nav-links a.active-nav {
+        color: #2D6830;
+        font-weight: bold;
+        border-bottom: 2px solid #2D6830;
+    }
+    .main-content {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        color: #2D6830;
+    }
+
+    .filters {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+    }
+
+    .filters a {
+        text-decoration: none;
+        color: #333;
+        padding: 0.4rem 0.8rem;
+        border-radius: 4px;
+        border: 1px solid transparent;
+    }
+
+    .filters .active {
+        color: #fff;
+        background-color: #2D6830;
+        border-color: #2D6830;
+    }
+
+    .news-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .news-item {
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 1rem;
+        cursor: pointer;
+    }
+
+    .news-date {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.85rem;
+        color: #777;
+    }
+
+    .news-date .tag {
+        background-color: #2D6830;
+        color: white;
+        padding: 0.2rem 0.5rem;
+        font-size: 0.75rem;
+        border-radius: 3px;
+    }
+
+    .news-title {
+        font-size: 1.1rem;
+        margin: 0.3rem 0 0;
+    }
+    
+    .news-title a{
+      color: #000;
+    }
+
+    .news-title a:hover {
+      text-decoration: underline;
+    }
+    .contact{
+        background-color: #4d4F16;
+        color: white;
+        padding: 30px 20px 20px;
+        font-size: 14px;
+        position: relative;
+    }
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 40px;
+        max-width: 1000px;
+        margin: auto;
+        align-items: flex-start;
+    }
+    .detail{
+        max-width: 250px;
+    }
+    .tanikita{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    .tanikita img{
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        object-fit: cover;
+    }
+    .tanikita h1{
+        font-size: 30px;
+        font-weight: 700;
+    }
+    .text p{
+        font-size: 15px;
+        line-height: 1.6;
+        margin-top: 13px;
+    }
+    .links{
+        min-width: 120px;
+    }
+    .links h4{
+        font-size: 19px;
+        font-weight: 700;
+        margin-bottom: 24px;
+    }
+    .links ul{
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+    }
+    .links ul li{
+        margin-bottom: 20px;
+    }
+    .links ul li a{
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+    }
+    .links ul li a:hover {
+        color: #9DD89F;
+    }
+    .sosmed{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sosmed h4{
+        font-size: 19px;
+        font-weight: 700;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+    .icons{
+        display: flex;
+        justify-content: center;
+        gap: 19px;
+        margin-top: 0;
+    }
+    .icons img{
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+        transition: transform 0.2s;
+    }
+    .icons img:hover{
+        transform: scale(1.4);
+    }
+    .bottom{
+        position: absolute;
+        bottom: 5px;
+        left: 60px;
+        font-size: 10px;
+        text-align: left;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    .contact{
+  position: relative;
+  background-color: #4d4F16;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  min-width: 100dvw;
+  padding: 40px 60px;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 170px;
+  width: 100%;
+  height: 100%;
+
+}
+.detail{
+  max-width: 300px;
+}
+.tanikita{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.tanikita img{
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+.judul-1{
+  color: #fff;
+    font-size: 3rem;
+}
+.tanikita h1{
+  font-size: 60px;
+  font-weight: 700;
+}
+.text p{
+  font-size: 17px;
+  line-height: 1.6;
+  margin-top: 13px;
+}
+.links{
+  min-width: 120px;
+}
+.links h4{
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.links ul{
+  list-style: none;
+}
+.links ul li{
+  margin-bottom: 24px;
+}
+.links ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+}
+.links ul li a:hover {
+  color: #9DD89F;
+}
+.sosmed{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sosmed h4{
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+}
+.icons{
+  display: flex;
+  justify-content: center;
+  gap: 19px;
+  margin-top: 0;
+}
+.icons img{
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  transition: transform 0.2s;
+}
+.icons img:hover{
+  transform: scale(1.4);
+}
+.bottom{
+  position: absolute;
+  bottom: 10px;
+  left: 60px;
+  font-size: 15px;
+  text-align: left;
+}
